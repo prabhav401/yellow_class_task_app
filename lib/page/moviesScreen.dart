@@ -5,8 +5,9 @@ class MoviesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text("Movie Screen Here."),
+        title:Center(child: Text("Movies  ")),
       ),
+      
     );
   }
 }
