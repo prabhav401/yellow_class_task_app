@@ -65,7 +65,6 @@ class DatabaseHelper {
     return result;
   }
 
-
   // delete db data
   Future <int> deleteTask (int id) async {
     Database db = await this.db;

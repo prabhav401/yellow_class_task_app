@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:google_signin_example/Models/TaskModel.dart';
 import 'package:google_signin_example/Models/movie.dart';
 
 class MovieCardWidget extends StatelessWidget {
   final Movie movie;
+  final Task task;
+
 
   const MovieCardWidget({
     @required this.movie,
-    Key key,
+    Key key, this.task,
   }) : super(key: key);
 
   @override
@@ -34,8 +37,9 @@ class MovieCardWidget extends StatelessWidget {
               buildGenre(movie: movie),
               const SizedBox(height: 4),
               buildRating(movie: movie),
+              const SizedBox(height: 4),
               Text(
-                '...',
+                "Director: ${movie.director}",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
@@ -80,6 +84,27 @@ class MovieCardWidget extends StatelessWidget {
           ...List.generate(
             movie.stars,
             (index) => Icon(Icons.star_rate, size: 18, color: Colors.orange),
+          ),
+          SizedBox(width: 8),
+          Material(
+          color: Colors.white,
+            child: Ink(
+            decoration: const ShapeDecoration(
+              color: Colors.black54,
+              shape: CircleBorder(),
+            ),
+              child: IconButton(
+                icon: const Icon(Icons.add),
+                color: Colors.white,
+                tooltip: "Add To WatchList",
+                onPressed: () { 
+                  task.id = movie.rating;
+                  task.directorName = movie.director;
+                  task.imageURL = movie.imageUrl;
+                  task.movieName = movie.movieName; 
+                },
+              )
+            )
           ),
         ],
       );

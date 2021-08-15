@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_signin_example/provider/movies.dart';
 import 'package:google_signin_example/widget/Movie_card_widget.dart';
+import 'package:google_signin_example/widget/addToWatchList.dart';
 import 'package:google_signin_example/widget/backgroundWidget.dart';
 
 class HomePage extends StatelessWidget {
@@ -39,7 +40,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // BuyButtonWidget(),
+                  BuyButtonWidget(),
                   SizedBox(height: 20),
                 ],
               ),

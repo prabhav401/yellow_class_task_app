@@ -1,10 +1,11 @@
 class Movie {
+  
   final String movieName;
   final String imageUrl;
   final int stars;
   final List<String> genres;
   final List<Actor> cast;
-  final double rating;
+  final int rating;
   final String director;
   final String description;
 
