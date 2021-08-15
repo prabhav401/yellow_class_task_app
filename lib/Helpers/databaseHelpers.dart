@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:google_signin_example/Models/TaskMoodel.dart';
+import 'package:google_signin_example/Models/TaskModel.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -54,7 +54,7 @@ class DatabaseHelper {
   Future<int> insertTask (Task task) async {
     Database db = await this.db;
     final int result = await db.insert(tableName, task.toMap());
-      return result;
+    return result;
   }
 
   // update tasks
@@ -71,6 +71,6 @@ class DatabaseHelper {
     Database db = await this.db;
     final int result = await db.delete(tableName, where: '$colId = ?', whereArgs: [id],
     );
-      return result;
+    return result;
   }
 }

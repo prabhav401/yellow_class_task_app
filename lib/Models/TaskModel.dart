@@ -6,8 +6,21 @@ class Task {
   String imageURL;
   int watchStatus;      
 
-  Task ( { this.id, this.movieName, this.directorName, this.imageURL, this.watchStatus } );
-  Task.withId( { this.id, this.movieName, this.directorName, this.imageURL, this.watchStatus } );
+  Task ( { 
+    this.id,
+    this.movieName, 
+    this.directorName, 
+    this.imageURL, 
+    this.watchStatus 
+    } );
+
+  Task.withId( { 
+    this.id,
+    this.movieName, 
+    this.directorName, 
+    this.imageURL, 
+    this.watchStatus 
+    } );
 
   Map <String, dynamic> toMap() {
     final map = Map <String, dynamic>();
