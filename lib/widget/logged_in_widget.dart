@@ -1,12 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_signin_example/page/homePageMovies.dart';
 import 'package:google_signin_example/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class LoggedInWidget extends StatelessWidget {
-
-  void _pushSaved(){}
-
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class LoggedInWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/JustOneMoreEpisode.jpg'),
+              image: AssetImage('assets/JustOneMoreEpisode.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -66,7 +64,9 @@ class LoggedInWidget extends StatelessWidget {
                   SizedBox(width: 15.0),
                   ElevatedButton(
                     onPressed: () {
-                      _pushSaved();
+                      Navigator.push(context, new MaterialPageRoute(
+                        builder: (context) => HomePage()
+                        ));
                     },
                     child: Text('Movies'),
                   ),
