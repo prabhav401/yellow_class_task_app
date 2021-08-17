@@ -1,1 +1,14 @@
-
+- RA1811030010072: <br />
+- The application is created using the Flutter SDK.<br />
+- What Can be Done : <br />
+      - Login using google Authentication <br />
+      - Save login details <br />
+      - Available Movies to select from <br />
+      - Option to add Movies to WatchList <br />
+      - Delete movies from Watch List <br />
+      - Insert Previously deleted Movies back to the WatchList <br />
+      - Add new Movie to the List <br />
+- Tech Stack Used : <br />
+      - Flutter SDK <br />
+      - SQFLITE Database <br />
+      - Dart Language <br />
